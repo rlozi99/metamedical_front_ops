@@ -11,8 +11,8 @@ configMapGenerator:
   name: app-config
 
 images:
-- name: ${REGISTRY}/${IMAGE_NAME}
-  newTag: ${NEW_IMAGE_TAG}
+- name: goodbirdacr.azurecr.io/medical/front
+  newTag: dev
 #
 patches:
 - path: patch_deployment.yaml
