@@ -13,7 +13,7 @@ configMapGenerator:
 images:
 - name: goodbirdacr.azurecr.io/medical/front
   newTag: dev-latest
-
+#
 patches:
 - path: patch_deployment.yaml
   target:
