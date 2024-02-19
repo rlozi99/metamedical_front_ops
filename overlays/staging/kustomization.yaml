@@ -2,17 +2,18 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../base
+- ../../base
 
 configMapGenerator:
-- name: app-config
-  literals:
-    - ENV=production
-    - DEBUG=false
+- literals:
+  - ENV=production
+  - DEBUG=false
+  name: app-config
 
 images:
-  - name: goodbirdacr.azurecr.io/medical/front
-    newTag: prod
+- name: goodbirdacr.azurecr.io/medical/front
+  newName: goodbirdacr.azurecr.io/medical/front
+  newTag: stg-6
 
 patches:
 - path: patch_deployment.yaml
