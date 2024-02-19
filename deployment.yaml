@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: front-end-deployment
-  namespace: front
+  namespace: frontend
 spec:
   revisionHistoryLimit: 0
   selector:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: front-end-deployment
-        image: goodbirdacr.azurecr.io/medicine/front:latest
+        image: goodbirdacr.azurecr.io/medical/front:latest
         resources:
           requests:
             cpu: 10m
@@ -46,14 +46,13 @@ spec:
       imagePullSecrets:
       - name: goodbirdacr
 
-
 ---
 
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: frontend-hpa
-  namespace: front
+  namespace: frontend
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
