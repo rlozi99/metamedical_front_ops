@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: front-end-deployment
-  namespace: frontend
+  namespace: front
 spec:
   revisionHistoryLimit: 0
   selector:
@@ -52,7 +52,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: frontend-hpa
-  namespace: frontend
+  namespace: front
 spec:
   scaleTargetRef:
     apiVersion: apps/v1

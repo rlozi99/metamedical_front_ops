@@ -20,5 +20,5 @@ patches:
     group: apps
     kind: Deployment
     name: front-end-deployment
-    namespace: frontend
+    namespace: front
     version: v1
