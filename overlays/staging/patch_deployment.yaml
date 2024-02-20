@@ -11,6 +11,6 @@ spec:
         image: goodbirdacr.azurecr.io/medical/front
         resources:
           limits:
-            memory: "256Mi"
+            memory: "512Mi"
           requests:
             memory: "128Mi"
